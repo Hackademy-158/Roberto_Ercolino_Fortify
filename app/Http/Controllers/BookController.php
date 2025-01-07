@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
+use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
 {
@@ -34,6 +35,7 @@ class BookController extends Controller
             'title' => $request->title,
             'author' => $request->author,
             'plot' => $request->plot,
+            'user_id' =>Auth::user()->id,
             'price' => $request->price,
             'cover' => $request->file('cover')->store('books-cover', 'public')
         ]);

@@ -10,6 +10,9 @@
             <p class="card-text">
                 {{$book->created_at}}
             </p>
+            <p class="card-text">
+                creato da: {{$book->user->name ?? 'utente sconosciuto'}}
+            </p>
         </div>
     </div>
 </a>
