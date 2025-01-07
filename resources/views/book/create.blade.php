@@ -15,23 +15,38 @@
                         @csrf
                         <div class="mb-3">
                             <label for="title" class="form-label">Titolo</label>
-                            <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp" value="{{old('title')}}">
+                            <input type="text" name="title" class="form-control" id="title"  value="{{old('title')}}">
+                            @error('title')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="author" class="form-label">autore</label>
-                            <input type="text" name="author" class="form-control" id="author" aria-describedby="emailHelp" value="{{old('author')}}">
+                            <input type="text" name="author" class="form-control" id="author"  value="{{old('author')}}">
+                            @error('author')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="cover" class="form-label">cover</label>
-                            <input type="file" name="cover" class="form-control" id="cover" aria-describedby="emailHelp">
+                            <input type="file" name="cover" class="form-control" id="cover">
+                            @error('file')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="price" class="form-label">prezzo</label>
-                            <input type="number" step="0.01" name="price" class="form-control" id="price" aria-describedby="emailHelp" value="{{old('price')}}">
+                            <input type="number" step="0.01" name="price" class="form-control" id="price" value="{{old('price')}}">
+                            @error('price')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label for="plot" class="form-label"></label>
                             <textarea name="plot" id="plot" cols="70" rows="3">plot</textarea>
+                            @error('plot')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
 
                         <button type="submit" class="btn btn-primary">Inserisci</button>

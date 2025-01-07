@@ -8,4 +8,8 @@ Route::get('/', [PublicController::class, 'home'])->name('home');
 
 Route::get('/book/create', [BookController::class, 'create'])->name('book.create');
 
+Route::get('/book/index', [BookController::class, 'index'])->name('book.index');
+
+Route::get('/book/show/{book}', [BookController::class, 'show'])->name('book.show');
+
 Route::post('/book/store', [BookController::class, 'store'])->name('book.store');

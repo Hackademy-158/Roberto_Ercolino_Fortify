@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('book.create')}}">crea libro</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('book.index')}}">guarda libri</a>
+          </li>
         </ul>
 
         @auth
