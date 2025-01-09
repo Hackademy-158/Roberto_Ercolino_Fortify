@@ -15,6 +15,14 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('book.index')}}">guarda libri</a>
           </li>
+          @auth
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('platform.index')}}">guarda piattaforme</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('platform.create')}}">inserisci piattaforma</a>
+          </li>
+          @endauth
         </ul>
 
         @auth

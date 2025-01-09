@@ -41,6 +41,18 @@
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
+
+                        <span class="input-span">
+                            <label for="" class="label">piattaforme disponibili</label>
+                            @foreach ($platforms as $platform)
+                                <div class="col-12">
+                                    <input type="checkbox" value="{{$platform->id}}" id="{{$platform->id}}"
+                                        name="platforms[]">
+                                    <label for="{{$platform->id}}">{{$platform->name}}</label>
+                                </div>
+                            @endforeach
+                        </span>
+
                         <div class="mb-3">
                             <label for="plot" class="form-label"></label>
                             <textarea name="plot" id="plot" cols="70" rows="3">plot</textarea>

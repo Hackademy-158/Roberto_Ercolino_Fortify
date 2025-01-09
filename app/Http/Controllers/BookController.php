@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Book;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
+use App\Models\Platform;
 use Illuminate\Support\Facades\Auth;
 
 class BookController extends Controller
@@ -23,7 +24,8 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('book.create');
+        $platforms = Platform::all();
+        return view('book.create', compact('platforms'));
     }
 
     /**

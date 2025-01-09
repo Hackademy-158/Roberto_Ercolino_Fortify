@@ -46,8 +46,13 @@ class User extends Authenticatable
         ];
     }
 
-    public function songs()
+    public function books()
     {
         return $this->hasMany(Book::class);
+    }
+
+    public function platforms()
+    {
+        return $this->hasMany(Platform::class);
     }
 }

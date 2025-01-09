@@ -12,4 +12,9 @@ class Book extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function platforms()
+    {
+        return $this->belongsToMany(Platform::class);
+    }
 }

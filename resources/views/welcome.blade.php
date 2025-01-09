@@ -6,4 +6,10 @@
         </div>
     @endif
 
+    @if (session('platformCreated'))
+        <div class="alert">
+            {{session('platformCreated')}}
+        </div>
+    @endif
+
 </x-layout>
